@@ -18,10 +18,6 @@ const MetadataKey = sequelize.define(
     },
     metadataKey: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'metadatakey',
-        key: 'id',
-      },
     },
   },
   {

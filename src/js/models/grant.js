@@ -13,17 +13,9 @@ const Grant = sequelize.define(
     user: {
       allowNull: false,
       type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
     },
     role: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'role',
-        key: 'id',
-      },
     },
     dataset: {
       allowNull: false,

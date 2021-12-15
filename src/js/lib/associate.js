@@ -26,12 +26,12 @@ const associate = () => {
   });
 
   MetaDataKey.hasMany(MetaDataKey, {
-    foreignKey: 'metaDataKey',
+    foreignKey: 'metadataKey',
     sourceKey: 'id',
   });
 
   MetaDataKey.belongsTo(MetaDataKey, {
-    foreignKey: 'metaDataKey',
+    foreignKey: 'metadataKey',
     as: 'met',
     targetKey: 'id',
   });
@@ -48,7 +48,7 @@ const associate = () => {
   });
 
   MetaDataKey.hasMany(AvailableFor, {
-    foreignKey: 'metaDataKey',
+    foreignKey: 'metadataKey',
     sourceKey: 'id',
   });
 

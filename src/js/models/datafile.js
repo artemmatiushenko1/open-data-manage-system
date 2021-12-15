@@ -13,10 +13,6 @@ const DataFile = sequelize.define(
     dataSet: {
       allowNull: false,
       type: DataTypes.INTEGER,
-      references: {
-        model: 'dataset',
-        key: 'id',
-      },
     },
   },
   {

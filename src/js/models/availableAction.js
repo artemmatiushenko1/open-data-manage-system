@@ -13,18 +13,10 @@ const AvailableAction = sequelize.define(
     role: {
       allowNull: false,
       type: DataTypes.INTEGER,
-      references: {
-        model: 'role',
-        key: 'id',
-      },
     },
     actionType: {
       allowNull: false,
       type: DataTypes.INTEGER,
-      references: {
-        model: 'actiontype',
-        key: 'id',
-      },
     },
   },
   {

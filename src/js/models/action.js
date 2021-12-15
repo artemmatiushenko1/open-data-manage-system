@@ -16,26 +16,14 @@ const Action = sequelize.define(
     state: {
       allowNull: false,
       type: DataTypes.INTEGER,
-      references: {
-        model: 'state',
-        key: 'id',
-      },
     },
     actionType: {
       allowNull: false,
       type: DataTypes.INTEGER,
-      references: {
-        model: 'actiontype',
-        key: 'id',
-      },
     },
     grant: {
       allowNull: false,
       type: DataTypes.INTEGER,
-      references: {
-        model: 'grant',
-        key: 'id',
-      },
     },
   },
   {

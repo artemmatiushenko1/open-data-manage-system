@@ -12,10 +12,6 @@ const Dataset = sequelize.define(
     },
     category: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'category',
-        key: 'id',
-      },
     },
   },
   {
