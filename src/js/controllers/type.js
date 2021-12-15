@@ -8,7 +8,7 @@ exports.getAllTypes = async (req, res) => {
       data: { types },
     });
   } catch (e) {
-    res.json('Failed to get all types');
+    res.json({ message: 'Failed to get all types' });
   }
 };
 
@@ -16,7 +16,7 @@ exports.createType = async (req, res) => {
   try {
     const type = await Type.create(req.body);
     if (type)
-      res.status(200).json({
+      return res.status(200).json({
         status: 'success',
         data: { type },
       });
@@ -34,8 +34,9 @@ exports.getTypeById = async (req, res) => {
         status: 'success',
         data: { type },
       });
+    throw new Error("Can't find a type with a given id");
   } catch (e) {
-    return res.json({ message: 'Failed to get type by id' });
+    res.json({ message: e.message });
   }
 };
 
