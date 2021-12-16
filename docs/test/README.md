@@ -8,15 +8,15 @@
 
 ![](./get-type-by-id.png)
 
-- `/types/create` - Cтворити новий тип
+- `/type/create` - Cтворити новий тип
 
 ![](./create-type.png)
 
-- `/types/delete/:id` - Видалити тип за унікальним ідентифікатором
+- `/type/delete/:id` - Видалити тип за унікальним ідентифікатором
 
 ![](./delete-type-by-id.png)
 
-- `/types/update/:id` - Оновити тип за унікальним ідентифікатором
+- `/type/update/:id` - Оновити тип за унікальним ідентифікатором
 
 ![](./update-type-by-id.png)
 
@@ -36,6 +36,6 @@
 
 ![](./delete-metadata-key.png)
 
-- `/types/update/:id` - Оновити ключ метаданих за унікальним ідентифікатором
+- `/metadatakey/update/:id` - Оновити ключ метаданих за унікальним ідентифікатором
 
 ![](./update-metadata-key-by-id.png)
