@@ -50,7 +50,7 @@ exports.deleteTypeById = async (req, res) => {
     });
     res.status(200).json({
       status: 'success',
-      data: { type },
+      data: { number_of_destroyed_rows: type },
     });
   } catch (e) {
     res.json({ status: 'failed', message: e.message });
@@ -67,7 +67,7 @@ exports.updateTypeById = async (req, res) => {
     res.status(200).json({
       status: 'success',
       data: {
-        type,
+        number_of_affected_rows: type,
       },
     });
   } catch (e) {

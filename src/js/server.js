@@ -4,7 +4,7 @@ const typeRouter = require('./routes/type');
 const mDKeyRouter = require('./routes/metaDataKey');
 
 app.use(express.json());
-app.use('/types', typeRouter);
+app.use('/type', typeRouter);
 app.use('/metadatakey', mDKeyRouter);
 
 module.exports = app;
