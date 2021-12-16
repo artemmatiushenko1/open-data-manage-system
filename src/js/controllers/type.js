@@ -8,7 +8,7 @@ exports.getAllTypes = async (req, res) => {
       data: { types },
     });
   } catch (e) {
-    res.json({ message: 'Failed to get all types' });
+    res.json({ status: 'failed', message: 'Failed to get all types' });
   }
 };
 
@@ -21,7 +21,7 @@ exports.createType = async (req, res) => {
         data: { type },
       });
   } catch (e) {
-    res.json({ message: 'Failed to create a new Type' });
+    res.json({ status: 'failed', message: 'Failed to create a new Type' });
   }
 };
 
@@ -36,7 +36,7 @@ exports.getTypeById = async (req, res) => {
       });
     throw new Error("Can't find a type with a given id");
   } catch (e) {
-    res.json({ message: e.message });
+    res.json({ status: 'failed', message: e.message });
   }
 };
 
@@ -53,7 +53,7 @@ exports.deleteTypeById = async (req, res) => {
       data: { type },
     });
   } catch (e) {
-    res.json({ message: e.message });
+    res.json({ status: 'failed', message: e.message });
   }
 };
 
@@ -71,6 +71,6 @@ exports.updateTypeById = async (req, res) => {
       },
     });
   } catch (e) {
-    res.json({ message: 'Failed to update type by id' });
+    res.json({ status: 'failed', message: 'Failed to update type by id' });
   }
 };
